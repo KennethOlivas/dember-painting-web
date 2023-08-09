@@ -2,26 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.transform-fade-down-enter-active,
+.transform-fade-down-leave-active {
+  @apply transition-all translate-y-0 duration-300;
+}
+.transform-fade-down-enter, .transform-fade-down-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  @apply opacity-0 transform -translate-y-2;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.paragraph {
+  @apply text-gray-700 tracking-wide leading-relaxed;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+/* for remove arrow spinner button on input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
