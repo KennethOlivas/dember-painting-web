@@ -1,11 +1,13 @@
-"use client"
+"use client";
 import { Card, Divider } from "@nextui-org/react";
 import React from "react";
 import ServiceItem from "./ServiceItem";
 
 const index = () => {
   return (
-    <main className="relative grid sm:grid-cols-1 lg:grid-cols-12 mr-0 lg:mr-24 mb-24">
+    <main
+      id="services"
+      className="relative grid sm:grid-cols-1 lg:grid-cols-12 mr-0 lg:mr-24 pt-24">
       <Card className="hidden lg:inline md:col-span-3 max-h-60 w-full mx-auto text-center mb-10 pt-4 lg:mb-14 md:bg-primary px-4 relative left-60 rounded-md">
         <p className="mt-1 text-yellow-500 dark:text-gray-400">
           Short description

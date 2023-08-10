@@ -24,7 +24,7 @@ const NavBarHeader: FC = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" className="text-white" href="#">
+          <Link color="foreground" className="text-white" href="#services">
             Services
           </Link>
         </NavbarItem>
