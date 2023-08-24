@@ -8,12 +8,13 @@ interface Props {
 const HeroHeader: FC<Props> = ({ description, title }) => {
   return (
     <>
-      <h1 className="block text-3xl font-bold text-white sm:text-4xl lg:text-6xl lg:leading-tigh">
-        {title} <span className="text-yellow-500">Painting</span>
+      <h1 className="block text-3xl font-bold text-white sm:text-4xl lg:text-6xl lg:leading-tigh line-clamp-2">
+        {title} <span className="text-secondary">Color</span>
       </h1>
-      <p className="mt-3 text-lg text-gray-800 dark:text-gray-400">
-        {description}
-      </p>
+      <h2 className="text-2xl text-neutral-300 pt-8 font-semibold">
+        Professional House Painting that Reflects Your Style and Personality
+      </h2>
+      <p className="pt-4 text-lg text-gray-100">{description}</p>
     </>
   );
 };

@@ -1,14 +1,19 @@
-
 "use client";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenu, NavbarMenuToggle, NavbarMenuItem } from "@nextui-org/react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Link,
+  Button,
+  NavbarMenu,
+  NavbarMenuToggle,
+  NavbarMenuItem,
+} from "@nextui-org/react";
 import { FC } from "react";
 
-
 const NavBarHeader: FC = () => {
-  const menuItems = [
-    "Home",
-    "About",
-  ];
+  const menuItems = ["Home", "About"];
   return (
     <Navbar isBlurred={false} className="bg-transparent" shouldHideOnScroll>
       <NavbarContent>
@@ -41,7 +46,7 @@ const NavBarHeader: FC = () => {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} color="warning" href="#" variant="solid">
+          <Button as={Link} color="primary" href="#" variant="shadow">
             Contact Us
           </Button>
         </NavbarItem>

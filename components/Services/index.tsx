@@ -8,7 +8,9 @@ const index = () => {
     <main
       id="services"
       className="relative grid sm:grid-cols-1 lg:grid-cols-12 mr-0 lg:mr-24 pt-24">
-      <Card className="hidden lg:inline md:col-span-3 max-h-60 w-full mx-auto text-center mb-10 pt-4 lg:mb-14 md:bg-primary px-4 relative left-60 rounded-md">
+      <Card
+        isBlurred
+        className="hidden lg:inline md:col-span-3 max-h-60 w-full mx-auto text-center mb-10 pt-4 lg:mb-14 md:bg-primary px-4 relative left-60 rounded-md">
         <p className="mt-1 text-yellow-500 dark:text-gray-400">
           Short description
         </p>
@@ -16,7 +18,9 @@ const index = () => {
           Our Top class services
         </h2>
       </Card>
-      <Card className="sm:col-span-8 lg:mt-32 md:max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto relative lg:right-24">
+      <Card
+        isBlurred
+        className="sm:col-span-8 lg:mt-32 md:max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto relative lg:right-24">
         <div>
           <div className="text-center inline lg:hidden">
             <h2 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">

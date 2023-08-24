@@ -20,10 +20,10 @@ const index = () => {
             src="https://images.unsplash.com/photo-1665686377065-08ba896d16fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&h=800&q=80"
             alt="Image Description"
           />
-          <div className="absolute inset-0 -z-[1] bg-amber-500 w-full h-full rounded-md mt-4 -mb-4 mr-4 -ml-4 lg:mt-6 lg:-mb-6 lg:mr-6 lg:-ml-6 "></div>
+          <div className="absolute inset-0 -z-[1] bg-secondary w-full h-full rounded-md mt-4 -mb-4 mr-4 -ml-4 lg:mt-6 lg:-mb-6 lg:mr-6 lg:-ml-6 "></div>
         </div>
         <div className="col-span-6 justify-self-start">
-          <span className="text-xl text-amber-500 font-semibold ml-2">FAQ</span>
+          <span className="text-xl text-secondary font-semibold ml-2">FAQ</span>
           <h1 className="text-6xl font-bold text-black ml-2 pr-48 ">
             Find frequently asked questions here
           </h1>
