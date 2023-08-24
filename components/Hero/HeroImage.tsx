@@ -5,7 +5,7 @@ import React from "react";
 
 const HeroImage = () => {
   return (
-    <div className="relative ml-4 col-span-4 hidden md:inline ">
+    <div className="relative ml-4 col-span-6 hidden md:inline ">
       <NetxuiImage
         isBlurred
         as={Image}

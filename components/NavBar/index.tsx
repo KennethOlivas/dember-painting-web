@@ -15,9 +15,9 @@ import { FC } from "react";
 const NavBarHeader: FC = () => {
   const menuItems = ["Home", "About"];
   return (
-    <Navbar isBlurred={false} className="bg-transparent" shouldHideOnScroll>
+    <Navbar isBlurred={false} className="bg-transparent" position="static">
       <NavbarContent>
-        <NavbarMenuToggle className="sm:hidden" />
+        <NavbarMenuToggle className="sm:hidden text-white" />
         <NavbarBrand>
           <p className="font-bold text-inherit text-white">LOGO</p>
         </NavbarBrand>
@@ -51,10 +51,14 @@ const NavBarHeader: FC = () => {
           </Button>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu>
+      <NavbarMenu className="bg-opacity-80 bg-black">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link color="foreground" className="w-full" href="#" size="lg">
+            <Link
+              color="foreground"
+              className="w-full text-white"
+              href="#"
+              size="lg">
               {item}
             </Link>
           </NavbarMenuItem>
