@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const index = () => {
   return (
-    <main className="relative grid sm:grid-cols-1 lg:grid-cols-12 h-screen w-full gap-12">
+    <main className="relative grid sm:grid-cols-1 lg:grid-cols-12 h-screen w-full gap-12 bg-primary md:bg-transparent">
       <section className="lg:col-span-6 lg:mt-32 py-10 lg:py-14 relative">
         <div className="flex justify-center flex-col px-32 pt-16">
           <span className="uppercase text-secondary font-bold tracking-wider textle">
@@ -24,9 +24,9 @@ const index = () => {
             consequuntur quos voluptate quod
           </p>
         </div>
-        <div className="absolute inset-0 -z-[1] bg-primary w-[1400px] md:w-[700px] lg:w-[1200px] h-full mt-4 rounded-r-md" />
+        <div className="hidden lg:inline  absolute inset-0 -z-[1] bg-primary w-[1400px] md:w-[700px] lg:w-[1200px] h-full mt-4 rounded-r-md" />
       </section>
-      <section className="lg:col-span-6 justify-center  lg:mt-32 mx-auto  text-center  px-4 py-10 sm:px-6 lg:px-8 lg:py-14  relative lg:right-24">
+      <section className="hidden lg:inline lg:col-span-6 justify-center  lg:mt-32 mx-auto  text-center  px-4 py-10 sm:px-6 lg:px-8 lg:py-14  relative lg:right-24">
         <NetxuiImage
           as={Image}
           width={400}
