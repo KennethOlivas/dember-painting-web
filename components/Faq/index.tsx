@@ -10,7 +10,7 @@ const index = () => {
   return (
     <div className="mx-auto max-w-screen-2xl">
       <section className="grid grid-cols-1 md:grid-cols-9 h-screen place-items-center gap-x-8">
-        <div className="md:col-span-3 relative">
+        <div className="md:col-span-3 hidden md:inline relative">
           <NetxuiImage
             as={Image}
             width={700}
@@ -24,7 +24,7 @@ const index = () => {
         </div>
         <div className="md:col-span-6 justify-self-start">
           <span className="text-xl text-secondary font-semibold ml-2">FAQ</span>
-          <h1 className="text-6xl font-bold text-black ml-2 pr-48 ">
+          <h1 className="text-6xl font-bold text-black ml-2 lg:pr-48 pr-0 ">
             Find frequently asked questions here
           </h1>
           <Accordion variant="splitted" className="mt-8 mr-0">
