@@ -2,7 +2,7 @@
 import { Menu } from "@/constants/Menu";
 import { Link } from "@nextui-org/react";
 import FooterListItems from "./FooterListItems";
-import { CopyRight } from "@/constants/footer/Copyright";
+import CopyRight from "@/constants/CopyRight";
 
 const Footer = () => {
   return (
