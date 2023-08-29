@@ -9,6 +9,7 @@ const HeroImage = () => {
       <NetxuiImage
         isBlurred
         as={Image}
+        priority={true}
         width={500}
         height={700}
         className="h-[400px] w-[400px] md:h-auto md:w-auto"

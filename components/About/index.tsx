@@ -7,7 +7,7 @@ const index = () => {
   return (
     <main className="relative grid sm:grid-cols-1 lg:grid-cols-12 h-screen w-full gap-2 lg:gap-12 bg-primary xl:bg-transparent">
       <section className="lg:col-span-6 lg:mt-32 py-0 lg:py-14 relative">
-        <div className="flex justify-center flex-col px-2 md:px-12 xl:px-32 pt-4 lg:pt-16">
+        <div className="flex justify-center flex-col px-2 md:px-12 xl:pl-40 pt-4 lg:pt-16">
           <span className="uppercase text-secondary font-bold tracking-wider textle">
             About us
           </span>
@@ -32,7 +32,7 @@ const index = () => {
           width={400}
           height={300}
           isBlurred
-          className="w-full rounded-md 3xl:mt-36 md:mt-28 lg:mt-24 mt-0"
+          className="w-full rounded-md 2xl:mt-36 md:mt-28 lg:mt-24 mt-0"
           src="https://images.unsplash.com/photo-1665686377065-08ba896d16fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&h=800&q=80"
           alt="Image Description"
         />
