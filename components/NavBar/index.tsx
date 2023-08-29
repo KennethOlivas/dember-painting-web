@@ -46,7 +46,12 @@ const NavBarHeader: FC = () => {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="shadow">
+          <Button
+            as={Link}
+            color="primary"
+            href="#"
+            variant="shadow"
+            className="font-bold md:font-semibold">
             Contact Us
           </Button>
         </NavbarItem>
