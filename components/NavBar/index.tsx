@@ -15,15 +15,15 @@ import { FC, useEffect, useState } from "react";
 const menuItems = [
   {
     name: "Home",
-    href: "#",
+    href: "/#",
   },
   {
     name: "About",
-    href: "#about",
+    href: "/#about",
   },
   {
     name: "Services",
-    href: "#services",
+    href: "/#services",
   },
   {
     name: "Gallery",
@@ -52,8 +52,6 @@ const NavBarHeader: FC = () => {
 
   return (
     <Navbar
-      isBlurred={isMobile}
-      className={isMobile ? "" : "bg-transparent"}
       position={isMobile ? "sticky" : "static"}>
       <NavbarContent>
         <NavbarMenuToggle className="sm:hidden md:text-white" />
@@ -64,7 +62,7 @@ const NavBarHeader: FC = () => {
       <NavbarContent className="hidden sm:flex gap-8" justify="start">
         {menuItems.map((item, index) => (
           <NavbarItem key={`${item.name}-${index}`}>
-            <Link color="foreground" className="text-white" href={item.href}>
+            <Link color="foreground" href={item.href}>
               {item.name}
             </Link>
           </NavbarItem>
