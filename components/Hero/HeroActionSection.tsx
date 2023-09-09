@@ -1,25 +1,31 @@
 "use client";
 import { Button } from "@nextui-org/react";
 import React, { FC } from "react";
+import Play from "../Icons/Play";
+import Gallery from "../Icons/Gallery";
 
 const HeroActionSection: FC = () => {
   return (
-    <section className="mt-7 grid gap-3 w-full sm:inline-flex">
+    <div className="flex flex-wrap items-center space-x-4">
       <Button
-        className="w-full sm:w-auto font-semibold"
-        color="secondary"
-        variant="solid"
-        size="lg">
-        Watch video
+        startContent={<Play />}
+        variant="shadow"
+        color="primary"
+        size="lg"
+      >
+        Watch Video
       </Button>
       <Button
-        className="w-full sm:w-auto font-semibold text-white"
+        variant="shadow"
         color="secondary"
-        variant="bordered"
-        size="lg">
-        Request Your Free Consultation
+        size="lg"
+        href="/#"
+        className=""
+        startContent={<Gallery />}
+      >
+        Se our work
       </Button>
-    </section>
+    </div>
   );
 };
 

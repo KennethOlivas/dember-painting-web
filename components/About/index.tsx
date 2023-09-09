@@ -2,11 +2,13 @@
 import React from "react";
 import { Image as NetxuiImage } from "@nextui-org/react";
 import Image from "next/image";
+import Reveal from "../Reveal";
 
 const index = () => {
   return (
     <main className="relative grid sm:grid-cols-1 lg:grid-cols-12 h-screen w-full gap-2 lg:gap-12 bg-primary xl:bg-transparent">
       <section className="lg:col-span-6 lg:mt-32 py-0 lg:py-14 relative">
+        <Reveal>
         <div className="flex justify-center flex-col px-2 md:px-12 xl:pl-40 pt-4 lg:pt-16">
           <span className="uppercase text-secondary font-bold tracking-wider textle">
             About us
@@ -23,7 +25,8 @@ const index = () => {
             voluptatum, quibusdam, quia, quae voluptates voluptatibus
             consequuntur quos voluptate quod
           </p>
-        </div>
+          </div>
+        </Reveal>
         <div className="hidden lg:inline  absolute inset-0 -z-[1] bg-primary w-[1400px] md:w-[700px] lg:w-[1200px] h-full mt-4 rounded-r-md" />
       </section>
       <section className="lg:inline lg:col-span-6 justify-center lg:mt-32 mx-auto text-center px-4 py-2 sm:px-6 lg:px-8 lg:py-14 relative lg:right-24">

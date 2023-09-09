@@ -1,11 +1,11 @@
 "use client";
 import { Card, Divider } from "@nextui-org/react";
 import React from "react";
-import ServiceItem from "./ServiceItem";
-import Services from "@/constants/Services";
+import ServicesSection from "./ServicesSection";
 
 const index = () => {
   return (
+
     <main
       id="services"
       className="relative grid sm:grid-cols-1 lg:grid-cols-12 mr-0 lg:mr-24 pt-24 ">
@@ -30,17 +30,7 @@ const index = () => {
             </p>
             <Divider className="my-8" />
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3  gap-y-24 gap-x-12">
-            {Services.map(({ description, icon, id, title }) => (
-              <ServiceItem
-                icon={icon}
-                key={id}
-                title={title}
-                description={description}
-              />
-            ))
-            }
-          </div>
+          <ServicesSection />
         </div>
       </Card>
     </main>

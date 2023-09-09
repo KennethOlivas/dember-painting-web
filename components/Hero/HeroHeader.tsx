@@ -1,18 +1,23 @@
 import React, { FC } from "react";
+import HeroActionSection from "./HeroActionSection";
 
 interface Props {
   title: string;
   description: string;
 }
 
-const HeroHeader: FC<Props> = ({ description, title }) => {
+const HeroHeader: FC = () => {
   return (
-    <>
-      <h1 className="block text-3xl font-bold text-white sm:text-4xl lg:text-6xl lg:leading-tigh line-clamp-2">
-        {title} <span className="text-secondary">Color</span>
+    <div className="flex flex-col justify-center  h-full">
+      <h1 className="mb-4 text-4xl font-bold leading-snug text-dark sm:text-[42px] lg:text-[40px] xl:text-[42px]">
+        Transform Your Home into a Masterpiece of <span className="font-extrabold text-6xl tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-primary to-secondary">Color</span>
       </h1>
-      <p className="pt-4 text-lg text-gray-100">{description}</p>
-    </>
+      <p className="mb-8 max-w-[480px] text-xl text-inherit/30">
+        Revitalize your home with our <span className="underline decoration-primary/70">painting</span> experts. Breathe new life into your spaces with us! Free consultation available.
+      </p>
+      <HeroActionSection />
+    </div>
+
   );
 };
 
