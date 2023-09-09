@@ -8,7 +8,7 @@ const index = () => {
 
     <main
       id="services"
-      className="relative grid sm:grid-cols-1 lg:grid-cols-12 mr-0 lg:mr-24 pt-24 ">
+      className="relative grid sm:grid-cols-1 lg:grid-cols-12 mr-0 pt-24">
       <Card
         isBlurred
         className="hidden lg:inline md:col-span-3 max-h-60 w-full mx-auto text-center mb-10 pt-4 lg:mb-14 md:bg-primary px-4 relative left-60 rounded-md">

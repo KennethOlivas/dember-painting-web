@@ -34,8 +34,9 @@ const HeroImage: FC<HeroImageProps> = ({ alt, delay, src }) => {
         isBlurred
         isZoomed
         shadow="lg"
-        height={200}
+        height={100}
         width={300}
+        layout="responsive"
         src={src}
         alt={alt}
         className="w-full"

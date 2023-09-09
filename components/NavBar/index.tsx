@@ -58,7 +58,7 @@ const NavBarHeader: FC = () => {
       <NavbarContent>
         <NavbarMenuToggle className="sm:hidden md:text-white" />
         <NavbarBrand>
-          <Image src="/logo.png" alt="logo" width={150} height={150} />
+          <Image src="/logo.png" alt="logo" width={200} height={200}  className="mt-2"/>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-8" justify="start">
