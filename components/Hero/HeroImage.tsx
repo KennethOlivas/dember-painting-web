@@ -38,7 +38,7 @@ const HeroImage: FC<HeroImageProps> = ({ alt, delay, src }) => {
         width={300}
         src={src}
         alt={alt}
-        className="w-full rounded-2xl"
+        className="w-full"
       />
     </motion.div>
   );
