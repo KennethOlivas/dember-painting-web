@@ -10,6 +10,7 @@ import {
   NavbarMenuToggle,
   NavbarMenuItem,
 } from "@nextui-org/react";
+import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 
 const menuItems = [
@@ -52,11 +53,12 @@ const NavBarHeader: FC = () => {
 
   return (
     <Navbar
-      position={isMobile ? "sticky" : "static"}>
+      shouldHideOnScroll
+     >
       <NavbarContent>
         <NavbarMenuToggle className="sm:hidden md:text-white" />
         <NavbarBrand>
-          <p className="font-bold text-inherit md:text-white">LOGO</p>
+          <Image src="/logo.png" alt="logo" width={150} height={150} />
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-8" justify="start">

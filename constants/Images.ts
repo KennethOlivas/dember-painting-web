@@ -6,8 +6,8 @@ export interface CustomImage extends Image {
 
 export const images: CustomImage[] = [
   {
-    src: "/images/door-before.webp",
-    original: "/images/door-before.webp",
+    src: "/images/gallery/door-before.webp",
+    original: "/images/gallery/door-before.webp",
     width: 720,
     height: 960,
     tags: [
@@ -17,8 +17,8 @@ export const images: CustomImage[] = [
     caption: "Before",
   },
   {
-    src: "/images/door-after.webp",
-    original: "/images/door-after.webp",
+    src: "/images/gallery/door-after.webp",
+    original: "/images/gallery/door-after.webp",
     width: 720,
     height: 960,
     tags: [
@@ -28,8 +28,8 @@ export const images: CustomImage[] = [
     caption: "After",
   },
   {
-    src: "/images/fence_before.webp",
-    original: "/images/fence_before.webp",
+    src: "/images/gallery/fence_before.webp",
+    original: "/images/gallery/fence_before.webp",
     width: 720,
     height: 960,
     tags: [
@@ -39,8 +39,8 @@ export const images: CustomImage[] = [
     caption: "Before",
   },
   {
-    src: "/images/fence_after.webp",
-    original: "/images/fence_after.webp",
+    src: "/images/gallery/fence_after.webp",
+    original: "/images/gallery/fence_after.webp",
     width: 720,
     height: 960,
     tags: [
@@ -50,8 +50,8 @@ export const images: CustomImage[] = [
     caption: "After",
   },
   {
-    src: "/images/pink_house_before.webp",
-    original: "/images/pink_house_before.webp",
+    src: "/images/gallery/pink_house_before.webp",
+    original: "/images/gallery/pink_house_before.webp",
     width: 1536,
     height: 2048,
     tags: [
@@ -61,8 +61,8 @@ export const images: CustomImage[] = [
     caption: "Before",
   },
   {
-    src: "/images/pink_house_after.webp",
-    original: "/images/pink_house_after.webp",
+    src: "/images/gallery/pink_house_after.webp",
+    original: "/images/gallery/pink_house_after.webp",
     width: 1536,
     height: 2048,
     tags: [

@@ -2,6 +2,7 @@
 import { Card, Divider } from "@nextui-org/react";
 import React from "react";
 import ServiceItem from "./ServiceItem";
+import Services from "@/constants/Services";
 
 const index = () => {
   return (
@@ -14,7 +15,7 @@ const index = () => {
         <p className="mt-1 text-yellow-500 dark:text-gray-400">
           Short description
         </p>
-        <h2 className="text-2xl font-bold md:text-4xl md:leading-tight text-white">
+        <h2 className="text-2xl font-bold md:text-4xl md:leading-tight text-white pb-4">
           Our Top class services
         </h2>
       </Card>
@@ -29,31 +30,16 @@ const index = () => {
             </p>
             <Divider className="my-8" />
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-y-24 gap-x-12">
-            <ServiceItem
-              title="Service 1"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus."
-            />
-            <ServiceItem
-              title="Service 2"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus."
-            />
-            <ServiceItem
-              title="Service 3"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus."
-            />
-            <ServiceItem
-              title="Service 4"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus."
-            />
-            <ServiceItem
-              title="Service 5"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus."
-            />
-            <ServiceItem
-              title="Service 6"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus."
-            />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3  gap-y-24 gap-x-12">
+            {Services.map(({ description, icon, id, title }) => (
+              <ServiceItem
+                icon={icon}
+                key={id}
+                title={title}
+                description={description}
+              />
+            ))
+            }
           </div>
         </div>
       </Card>

@@ -1,22 +1,46 @@
 "use client";
 import { Image as NetxuiImage } from "@nextui-org/react";
 import Image from "next/image";
-import React from "react";
+import React, { FC } from "react";
+import { motion } from "framer-motion";
 
-const HeroImage = () => {
+
+type HeroImageProps = {
+  src: string;
+  alt: string;
+  delay: number;
+};
+
+const HeroImage: FC<HeroImageProps> = ({ alt, delay, src }) => {
   return (
-    <div>
+    <motion.div
+      animate={["initial"]}
+      variants={{
+        initial: {
+          y: [-10, 10],
+          rotate: 0,
+          transition: {
+            delay,
+            duration: 4,
+            repeat: Infinity,
+            // repeatDelay: 0.2,
+            repeatType: "reverse"
+          }
+        }
+      }}
+      className="py-3 sm:py-4">
       <NetxuiImage
-        isBlurred
         as={Image}
-        priority={true}
-        width={500}
-        height={700}
-        className="h-[400px] w-[400px] md:h-auto md:w-auto"
-        src="https://images.unsplash.com/photo-1665686377065-08ba896d16fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&h=800&q=80"
-        alt="Hero Image"
+        isBlurred
+        isZoomed
+        shadow="lg"
+        height={200}
+        width={300}
+        src={src}
+        alt={alt}
+        className="w-full rounded-2xl"
       />
-    </div>
+    </motion.div>
   );
 };
 
