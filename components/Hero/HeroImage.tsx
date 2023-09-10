@@ -1,5 +1,4 @@
 "use client";
-import { Image as NetxuiImage } from "@nextui-org/react";
 import Image from "next/image";
 import React, { FC } from "react";
 import { motion } from "framer-motion";
@@ -29,17 +28,14 @@ const HeroImage: FC<HeroImageProps> = ({ alt, delay, src }) => {
         }
       }}
       className="py-3 sm:py-4">
-      <NetxuiImage
-        as={Image}
-        isBlurred
-        isZoomed
-        shadow="lg"
+      <Image
+        priority={true}
         height={100}
         width={300}
         layout="responsive"
         src={src}
         alt={alt}
-        className="w-full"
+        className="w-full rounded-md shadow-2xl"
       />
     </motion.div>
   );
