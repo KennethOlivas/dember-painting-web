@@ -75,7 +75,7 @@ const NavBarHeader: FC = () => {
           <Button
             as={Link}
             color="primary"
-            href="#contact"
+            href="/#contact"
             variant="shadow"
             className="font-bold md:font-semibold">
             Contact Us
