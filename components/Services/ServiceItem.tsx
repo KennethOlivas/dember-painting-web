@@ -1,14 +1,7 @@
 import { FC } from "react";
 import type { Service } from "@/constants/Services";
 import { motion } from "framer-motion";
-
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1
-  }
-};
+import { item } from "@/utils/ItemsAnimated";
 
 const ServiceItem: FC<Service> = ({ description, title, icon }) => {
   return (

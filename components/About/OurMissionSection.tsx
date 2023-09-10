@@ -1,44 +1,11 @@
 import { Card, CardBody, CardHeader } from '@nextui-org/react'
-import React, { useEffect } from 'react'
 import OurMission from "@/constants/OurMission"
 import { motion } from 'framer-motion'
-import { useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-
-
-const container = {
-  hidden: { y: -100, scale: 0.5 },
-  visible: {
-    y: 0,
-    delay: 0.1,
-    scale: 1,
-    duration: 0.5,
-    transition: {
-      duration: 0.5,
-      delayChildren: 0.3,
-      staggerChildren: 0.2
-    }
-  }
-}
-
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1
-  }
-};
+import { container, item } from '@/utils/ItemsAnimated';
+import useInViewControl from '@/hooks/useInViewControl';
 
 const OurMissionSection = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
-
+  const { controls, ref} = useInViewControl()
   return (
     <motion.section
       ref={ref}
