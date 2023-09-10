@@ -5,7 +5,6 @@ import ServicesSection from "./ServicesSection";
 
 const index = () => {
   return (
-
     <main
       id="services"
       className="relative grid sm:grid-cols-1 lg:grid-cols-12 mr-0 pt-24">

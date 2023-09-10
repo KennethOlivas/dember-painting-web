@@ -8,7 +8,6 @@ const index = () => {
     <div className="flex justify-center items-center relative px-2 md:px-0 min-h-screen">
       <div className="container max-h-screen">
         <div className="flex flex-wrap md:-mx-4">
-          <div aria-hidden="true" className="absolute inset-[60%] right-0  my-auto w-[500px] h-[300px] rotate-45 bg-gradient-to-r from-primary to-secondary blur-3xl opacity-70 animate-pulse" />
           <div className="w-full px-4 lg:w-7/12">
             <HeroHeader />
           </div>
