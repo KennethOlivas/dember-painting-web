@@ -1,12 +1,10 @@
 "use client";
+import { FAQList } from "@/constants/FAQList";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { Image as NetxuiImage } from "@nextui-org/react";
 import Image from "next/image";
 
-const index = () => {
-  const defaultContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-
+const FAQ = () => {
   return (
     <div className="mx-auto max-w-screen-2xl">
       <section className="grid grid-cols-1 md:grid-cols-9 h-screen place-items-center gap-x-8">
@@ -27,43 +25,20 @@ const index = () => {
           <h1 className="text-6xl font-bold text-black ml-2 lg:pr-48 pr-0 ">
             Find frequently asked questions here
           </h1>
-          <Accordion variant="splitted" className="mt-8 mr-0">
-            <AccordionItem
-              key="1"
+          <Accordion
+            fullWidth
+            showDivider
+            variant="splitted" className="mt-8 mr-0">
+            {FAQList.map(({ answer, question }, index) => (<AccordionItem
+              key={index}
               aria-label="Question1"
-              title="Question 1"
+              title={question}
+              contentEditable
               className="font-semibold text-2xl">
               <span className="text-base font-normal leading-none">
-                {defaultContent}
+                {answer}
               </span>
-            </AccordionItem>
-            <AccordionItem
-              key="2"
-              aria-label="Question2"
-              title="Question 2"
-              className="font-semibold text-2xl">
-              <span className="text-base font-normal leading-none">
-                {defaultContent}
-              </span>
-            </AccordionItem>
-            <AccordionItem
-              key="3"
-              aria-label="Question3"
-              title="Question 3"
-              className="font-semibold text-2xl">
-              <span className="text-base font-normal leading-none">
-                {defaultContent}
-              </span>
-            </AccordionItem>
-            <AccordionItem
-              key="4"
-              aria-label="Question4"
-              title="Question 4"
-              className="font-semibold text-2xl">
-              <span className="text-base font-normal leading-none">
-                {defaultContent}
-              </span>
-            </AccordionItem>
+            </AccordionItem>))}
           </Accordion>
         </div>
       </section>
@@ -71,4 +46,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default FAQ;
