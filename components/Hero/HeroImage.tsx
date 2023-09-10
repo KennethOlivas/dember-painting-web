@@ -35,7 +35,7 @@ const HeroImage: FC<HeroImageProps> = ({ alt, delay, src }) => {
         layout="responsive"
         src={src}
         alt={alt}
-        className="w-full rounded-md shadow-2xl"
+        className="w-full rounded-md shadow-2xl hover:scale-105 duration-200 ease-in"
       />
     </motion.div>
   );
