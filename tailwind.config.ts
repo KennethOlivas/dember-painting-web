@@ -9,6 +9,14 @@ const config: Config = {
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
   darkMode: "class",
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-cabin)'],
+        mono: ['var(--font-roboto-mono)'],
+      },
+    },
+  },
   plugins: [nextui({
     themes: {
       light: {
