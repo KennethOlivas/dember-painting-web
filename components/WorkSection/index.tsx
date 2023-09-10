@@ -28,17 +28,14 @@ const WorkSection = () => {
                 View our work gallery
               </h2>
               <p className="text-base text-gray-700 md:text-lg">
-                lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor
-                sit amet, consectetur adip lorem ipsum dolor sit amet,
-                consectetur adip lorem ipsum dolor sit amet, consectetur adip
-                lorem ipsum
+                Transform your surroundings with our expert painting services. Whether it&apos;s the interiors that need a fresh, inviting look or the exteriors requiring a vibrant, durable finish, we&apos;ve got you covered. Discover how our skilled painters can breathe life and color into your spaces.
               </p>
             </div>
             <div>
               <Button
                 as={Link}
                 color="primary"
-                href="#"
+                href="gallery"
                 variant="shadow"
                 endContent={
                   <svg

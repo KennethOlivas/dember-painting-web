@@ -6,7 +6,7 @@ import Gallery from "../Icons/Gallery";
 
 const HeroActionSection: FC = () => {
   return (
-    <div className="flex flex-wrap items-center space-x-4">
+    <div className="flex flex-nowrap items-center space-x-4">
       <Button
         startContent={<Play />}
         variant="shadow"

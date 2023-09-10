@@ -9,7 +9,7 @@ interface Props {
 const HeroHeader: FC = () => {
   return (
     <div className="flex flex-col justify-center  h-full">
-      <h1 className="mb-4 text-4xl font-bold leading-snug text-dark sm:text-[42px] lg:text-[40px] xl:text-[42px]">
+       <h1 className="mb-4 text-4xl font-bold leading-snug text-dark sm:text-[42px] lg:text-[40px] xl:text-[42px]">
         Transform Your Home into a Masterpiece of <span className="font-extrabold text-6xl tracking-wider text-transparent  bg-clip-text bg-gradient-to-r from-primary to-secondary">Color</span>
       </h1>
       <p className="mb-8 max-w-[480px] text-xl text-inherit/30">
