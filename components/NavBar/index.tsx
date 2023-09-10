@@ -16,7 +16,7 @@ import { FC, useEffect, useState } from "react";
 const menuItems = [
   {
     name: "Home",
-    href: "/#",
+    href: "/",
   },
   {
     name: "About",
@@ -27,38 +27,24 @@ const menuItems = [
     href: "/#services",
   },
   {
+    name: "FAQ's",
+    href: "/#faq",
+  },
+  {
     name: "Gallery",
     href: "/gallery",
   },
 ];
 
 const NavBarHeader: FC = () => {
-  // create state for navbar if mobile true is not mobile false
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    // check if window width is less than 640px
-    if (window.innerWidth < 640) {
-      setIsMobile(true);
-    }
-    // add event listener to window resize
-    window.addEventListener("resize", () => {
-      // check if window width is less than 640px
-      if (window.innerWidth < 640) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    });
-  }, []);
-
   return (
     <Navbar
       shouldHideOnScroll
-     >
+    >
       <NavbarContent>
         <NavbarMenuToggle className="sm:hidden md:text-white" />
         <NavbarBrand>
-          <Image src="/logo.png" alt="logo" width={200} height={200}  className="mt-2"/>
+          <Image src="/logo.png" alt="logo" width={200} height={200} className="mt-2" />
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-8" justify="start">

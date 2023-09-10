@@ -6,7 +6,9 @@ import Image from "next/image";
 
 const FAQ = () => {
   return (
-    <div className="mx-auto max-w-screen-2xl">
+    <div
+      id="faq"
+      className="mx-auto max-w-screen-2xl">
       <section className="grid grid-cols-1 md:grid-cols-9 h-screen place-items-center gap-x-8">
         <div className="md:col-span-3 hidden md:inline relative">
           <NetxuiImage
