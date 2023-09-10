@@ -37,9 +37,13 @@ const menuItems = [
 ];
 
 const NavBarHeader: FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <Navbar
+      isMenuOpen={isMenuOpen}
       shouldHideOnScroll
+      onMenuOpenChange={(open) => setIsMenuOpen(open as boolean)}
     >
       <NavbarContent>
         <NavbarMenuToggle className="sm:hidden md:text-white" />
@@ -72,6 +76,7 @@ const NavBarHeader: FC = () => {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
+              onClick={() => setIsMenuOpen(false)}
               color="foreground"
               className="w-full text-white text-4xl text-center"
               href={item.href}
