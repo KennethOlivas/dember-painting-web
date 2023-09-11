@@ -22,7 +22,7 @@ const HeroImage: FC<HeroImageProps> = ({ alt, delay, src }) => {
             delay,
             duration: 4,
             repeat: Infinity,
-            // repeatDelay: 0.2,
+            repeatDelay: 0.2,
             repeatType: "reverse"
           }
         }

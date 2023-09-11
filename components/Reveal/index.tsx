@@ -1,7 +1,6 @@
-import React, { FC, useEffect } from "react";
-import { useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React, { FC } from "react";
 import { motion } from "framer-motion";
+import useInViewControl from "@/hooks/useInViewControl";
 
 
 const BoxVariants = {
@@ -15,14 +14,7 @@ type RevealProps = {
 };
 
 const Reveal: FC<RevealProps> = ({ children }) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
+  const { controls, ref } = useInViewControl()
 
   return (
     <motion.div
