@@ -3,6 +3,7 @@ import HeaderContact from "./HeaderContact";
 import useContact from "@/hooks/useContact";
 import CardAction from "./CardAction";
 import ContactForm from "./ContactForm";
+import { Tooltip } from "@nextui-org/react";
 
 const Contact = () => {
   const { ContactInfo } = useContact();
@@ -16,6 +17,7 @@ const Contact = () => {
             {ContactInfo.map((item) => {
               return (
                 <CardAction
+                  tooltip={item.tooltip}
                   key={item.id}
                   title={item.title}
                   description={item.description}

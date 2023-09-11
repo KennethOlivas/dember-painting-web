@@ -15,6 +15,7 @@ const useContact = () => {
     return [
       {
         id: 1,
+        tooltip: "Click to open Google Maps",
         title: "Our Location",
         description: directions,
         icon: <LocationIcon />,
@@ -23,6 +24,7 @@ const useContact = () => {
       },
       {
         id: 2,
+        tooltip: "Click to open WhatsApp",
         title: "Phone Number",
         description: phone,
         icon: <PhoneIcon />,
@@ -31,6 +33,7 @@ const useContact = () => {
       },
       {
         id: 3,
+        tooltip: "Click to open Email",
         title: "How Can We Help?",
         description: email,
         icon: <EmailIcon />,
