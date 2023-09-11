@@ -44,6 +44,8 @@ const NavBarHeader: FC = () => {
       isMenuOpen={isMenuOpen}
       shouldHideOnScroll
       onMenuOpenChange={(open) => setIsMenuOpen(open as boolean)}
+      className="max-w-full"
+      maxWidth="2xl"
     >
       <NavbarContent>
         <NavbarMenuToggle className="sm:hidden md:text-white" />

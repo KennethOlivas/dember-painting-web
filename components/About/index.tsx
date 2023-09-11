@@ -9,10 +9,10 @@ const index = () => {
   return (
     <main
       id="about"
-      className=" grid sm:grid-cols-1 xl:grid-cols-12 w-full gap-2 lg:gap-6 place-items-center lg:place-items-start 2xl:gap-x-32 bg-primary xl:bg-transparent lg:mb-24">
+      className="grid sm:grid-cols-1 xl:grid-cols-12 w-full gap-2 lg:gap-6 place-items-center xl:place-items-start 2xl:gap-x-32 bg-primary xl:bg-transparent lg:mb-24">
       <section className="lg:col-span-7 lg:mt-32 py-0 lg:py-14 relative">
         <Reveal>
-          <div className="flex justify-center flex-col px-2 md:px-12 xl:pl-40 pt-4 lg:pt-16">
+          <div className="flex justify-center flex-col px-2 md:px-12 2xl:pl-40 pt-4 lg:pt-16">
             <span className="uppercase text-secondary font-bold tracking-wider textle">
               About us
             </span>
@@ -29,13 +29,13 @@ const index = () => {
         </Reveal>
         <div className="hidden lg:inline  absolute inset-0 -z-[1] bg-primary w-[1400px] md:w-[700px] lg:w-[1200px] h-full mt-4 rounded-r-md" />
       </section>
-      <section className="lg:inline lg:col-span-5 justify-center lg:mt-32  px-4 py-2 sm:px-6 lg:px-8 lg:py-14 relative lg:right-24">
+      <section className="lg:inline lg:col-span-5 justify-center xl:mt-32  px-4 py-2 sm:px-6 lg:px-8 lg:py-14 relative 2xl:right-24">
         <Reveal>
           <NetxuiImage
             as={Image}
             width={400}
             height={200}
-            className="w-full rounded-md md:mt-20"
+            className="w-full rounded-md xl:mt-20"
             src="/images/about.webp"
             alt="Image Description"
           />

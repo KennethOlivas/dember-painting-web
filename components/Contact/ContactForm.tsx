@@ -1,7 +1,23 @@
 import { Button, Card, Input, Textarea } from "@nextui-org/react";
+import { useFormik } from "formik";
 import React from "react";
 
+
 const ContactForm = () => {
+  const formik = useFormik({
+    initialValues: {
+      fullName: '',
+      phone: '',
+      email: '',
+      message: ''
+    },
+    onSubmit: async values => {
+      await fetch('/api/send', {
+        method: 'POST',
+        body: JSON.stringify(values),
+      });
+    },
+  });
   return (
     <Card className="w-full px-4 lg:w-5/12 xl:w-4/12">
       <div
@@ -10,9 +26,12 @@ const ContactForm = () => {
         <h3 className="mb-8 text-2xl font-semibold md:text-[26px]">
           Send us a Message
         </h3>
-        <form>
+        <form onSubmit={formik.handleSubmit}>
           <div className="mb-6">
             <Input
+              onChange={formik.handleChange}
+              value={formik.values.fullName}
+              id="fullName"
               type="text"
               label="Full name"
               variant="underlined"
@@ -21,6 +40,9 @@ const ContactForm = () => {
           </div>
           <div className="mb-6">
             <Input
+              onChange={formik.handleChange}
+              value={formik.values.email}
+              id="email"
               type="enail"
               label="Email"
               variant="underlined"
@@ -29,14 +51,20 @@ const ContactForm = () => {
           </div>
           <div className="mb-6">
             <Input
+              onChange={formik.handleChange}
+              value={formik.values.phone}
+              id="phone"
               type="text"
-              label="Full name"
+              label="phone number"
               variant="underlined"
               color="primary"
             />
           </div>
           <div className="mb-6">
             <Textarea
+              onChange={formik.handleChange}
+              value={formik.values.message}
+              id="message"
               variant="underlined"
               labelPlacement="outside"
               placeholder="Enter your message here"
@@ -44,7 +72,8 @@ const ContactForm = () => {
             />
           </div>
           <div className="mb-0">
-            <Button type="submit" variant="shadow" color="primary" size="lg">
+            <Button
+              type="submit" variant="shadow" color="primary" size="lg">
               Send Message
             </Button>
           </div>
