@@ -3,6 +3,7 @@ import { Button } from "@nextui-org/react";
 import React, { FC } from "react";
 import Play from "../Icons/Play";
 import Gallery from "../Icons/Gallery";
+import Link from "next/link";
 
 const HeroActionSection: FC = () => {
   return (
@@ -16,14 +17,15 @@ const HeroActionSection: FC = () => {
         Watch Video
       </Button>
       <Button
+        as={Link}
         variant="shadow"
         color="secondary"
         size="lg"
-        href="/#"
+        href="/gallery"
         className=""
         startContent={<Gallery />}
       >
-        Se our work
+        See our work
       </Button>
     </div>
   );

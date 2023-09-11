@@ -121,7 +121,7 @@ export const images: CustomImage[] = [
   },
   {
     src: "/images/gallery/9.webp",
-    original: "/images/gallery/9L.webp",
+    original: "/images/gallery/9.webp",
     width: 1451,
     height: 850,
   },
@@ -170,61 +170,55 @@ export const images: CustomImage[] = [
   },
   {
     src: "/images/gallery/17.webp",
-    original: "/images/gallery/17L.webp",
+    original: "/images/gallery/17.webp",
     width: 1536,
     height: 2048
   },
   {
     src: "/images/gallery/18.webp",
-    original: "/images/gallery/18L.webp",
+    original: "/images/gallery/18.webp",
     width: 1536,
     height: 2048
   },
   {
     src: "/images/gallery/19.webp",
-    original: "/images/gallery/19L.webp",
+    original: "/images/gallery/19.webp",
     width: 1536,
     height: 2048
   },
   {
     src: "/images/gallery/20.webp",
-    original: "/images/gallery/20L.webp",
+    original: "/images/gallery/20.webp",
     width: 1536,
     height: 2048
   },
   {
     src: "/images/gallery/21.webp",
-    original: "/images/gallery/21L.webp",
+    original: "/images/gallery/21.webp",
     width: 1536,
     height: 2048
   },
   {
     src: "/images/gallery/22.webp",
-    original: "/images/gallery/22L.webp",
+    original: "/images/gallery/22.webp",
     width: 1536,
     height: 2048
   },
   {
     src: "/images/gallery/23.webp",
-    original: "/images/gallery/23L.webp",
+    original: "/images/gallery/23.webp",
     width: 1536,
     height: 2048
   },
   {
     src: "/images/gallery/24.webp",
-    original: "/images/gallery/24L.webp",
+    original: "/images/gallery/24.webp",
     width: 1536,
     height: 2048,
   },
   {
     src: "/images/gallery/25.webp",
-    original: "/images/gallery/25L.webp",
-    width: 1536,
-    height: 2048,
-  },
-  {
-    src: "/images/gallery/26.webp",
-    original: "/images/gallery/26L.webp",
+    original: "/images/gallery/25.webp",
     width: 1536,
     height: 2048,
   },
