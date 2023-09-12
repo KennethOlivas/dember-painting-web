@@ -17,7 +17,7 @@ const OurMissionSection = () => {
         <motion.div key={index} variants={item}>
           <Card className="h-full">
             <CardHeader className="justify-center">
-              <h5 className="text-xl text-primary font-bold">{title}</h5>
+              <p className="text-xl text-primary font-bold">{title}</p>
             </CardHeader>
             <CardBody className="pt-0">
               <p className='text-neutral-600'>{content}</p>
