@@ -48,10 +48,14 @@ const NavBarHeader: FC = () => {
       maxWidth="2xl"
     >
       <NavbarContent>
-        <NavbarMenuToggle className="sm:hidden md:text-white" />
-        <NavbarBrand>
-          <Image src="/logo.png" alt="logo" width={200} height={200} className="mt-2" />
-        </NavbarBrand>
+        <li>
+          <NavbarMenuToggle className="sm:hidden md:text-white" />
+        </li>
+        <li>
+          <NavbarBrand>
+            <Image src="/logo.png" alt="logo" width={200} height={200} className="mt-2" />
+          </NavbarBrand>
+        </li>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-8" justify="start">
         {menuItems.map((item, index) => (

@@ -7,10 +7,10 @@ type Props = {
 const HeaderContact: FC<Props> = ({ description }) => {
   return (
     <div className="mb-2 xl:mb-[150px]">
-      <span className="font-headingFont text-secondary mb-5 text-base font-semibold">
+      <span className="text-secondary mb-5 text-2xl font-semibold">
         CONTACT US
       </span>
-      <h2 className="text-4xl text-white font-semibold">{description}</h2>
+      <h2 className="text-4xl text-gray-200 font-semibold tracking-wider">{description}</h2>
     </div>
   );
 };
