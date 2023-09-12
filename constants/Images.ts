@@ -10,10 +10,6 @@ export const images: CustomImage[] = [
     original: "/images/gallery/door-before.webp",
     width: 720,
     height: 960,
-    tags: [
-      { value: "Interior", title: "Interior" },
-      { value: "Before", title: "Before" },
-    ],
     caption: "Before",
   },
   {
@@ -21,10 +17,6 @@ export const images: CustomImage[] = [
     original: "/images/gallery/door-after.webp",
     width: 720,
     height: 960,
-    tags: [
-      { value: "Interior", title: "Interior" },
-      { value: "After", title: "After" },
-    ],
     caption: "After",
   },
   {
@@ -32,10 +24,6 @@ export const images: CustomImage[] = [
     original: "/images/gallery/fence_before.webp",
     width: 720,
     height: 960,
-    tags: [
-      { value: "Exterior", title: "Exterior" },
-      { value: "Before", title: "Before" },
-    ],
     caption: "Before",
   },
   {
@@ -43,10 +31,6 @@ export const images: CustomImage[] = [
     original: "/images/gallery/fence_after.webp",
     width: 720,
     height: 960,
-    tags: [
-      { value: "Exterior", title: "Exterior" },
-      { value: "After", title: "After" },
-    ],
     caption: "After",
   },
   {
@@ -54,10 +38,6 @@ export const images: CustomImage[] = [
     original: "/images/gallery/pink_house_before.webp",
     width: 1536,
     height: 2048,
-    tags: [
-      { value: "Exterior", title: "Exterior" },
-      { value: "Before", title: "Before" },
-    ],
     caption: "Before",
   },
   {
@@ -65,10 +45,6 @@ export const images: CustomImage[] = [
     original: "/images/gallery/pink_house_after.webp",
     width: 1536,
     height: 2048,
-    tags: [
-      { value: "Exterior", title: "Exterior" },
-      { value: "After", title: "After" },
-    ],
     caption: "After",
   },
   {
@@ -137,7 +113,6 @@ export const images: CustomImage[] = [
     width: 1536,
     height: 2048,
   },
-  // create the same objcet for all images max number 26
   {
     src: "/images/gallery/12L.webp",
     original: "/images/gallery/12L.webp",
