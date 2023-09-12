@@ -3,17 +3,40 @@ import { Menu } from "@/constants/Menu";
 import { Link } from "@nextui-org/react";
 import FooterListItems from "./FooterListItems";
 import CopyRight from "@/constants/CopyRight";
+import { directions, email, phone } from "@/constants/contact/ContactInfo"
 
 const Footer = () => {
   return (
     <footer className="bg-primary">
       <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <section className="grid row-gap-10 mb-8 lg:grid-cols-4">
-          <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
+        <section className="grid row-gap-10 mb-8 lg:grid-cols-3">
+          <div className="grid grid-cols-3 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-3">
             <FooterListItems items={Menu} title="Pages" />
-            <FooterListItems items={Menu} title="Pages" />
-            <FooterListItems items={Menu} title="Pages" />
-            <FooterListItems items={Menu} title="Pages" />
+            <div>
+              <p className="font-medium tracking-wide text-white">Contact Us</p>
+              <ul className="mt-2 space-y-2">
+                <li className="text-white transition-colors duration-300 hover:text-deep-purple-accent-200">
+                  {phone}
+                </li>
+                <li className="text-white transition-colors duration-300 hover:text-deep-purple-accent-200">
+                  {email}
+                </li>
+                <li className="text-white transition-colors duration-300 hover:text-deep-purple-accent-200">
+                  {directions}
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-medium tracking-wide text-white">Open Hours</p>
+              <ul className="mt-2 space-y-2">
+                <li className="text-white transition-colors duration-300 hover:text-deep-purple-accent-200">
+                  M-F: 8am - 6pm
+                </li>
+                <li className="text-white transition-colors duration-300 hover:text-deep-purple-accent-200">
+                  S-S, 9am - 1pm
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
         <section className="flex flex-col justify-between pt-5 pb-10 border-t border-gray-800 sm:flex-row">
