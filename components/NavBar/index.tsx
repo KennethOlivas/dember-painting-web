@@ -57,7 +57,7 @@ const NavBarHeader: FC = () => {
           </NavbarBrand>
         </li>
       </NavbarContent>
-      <NavbarContent className="hidden sm:flex gap-8" justify="start">
+      <NavbarContent className="hidden sm:flex gap-8" justify="center">
         {menuItems.map((item, index) => (
           <NavbarItem key={`${item.name}-${index}`}>
             <Link color="foreground" href={item.href}>
