@@ -24,7 +24,7 @@ const Services = () => {
       className="relative grid sm:grid-cols-1 lg:grid-cols-12">
       <Card
         isBlurred
-        className="hidden lg:inline md:col-span-3 max-h-60 w-full mx-auto text-center mb-10 pt-4 lg:mb-14 md:bg-primary px-4 relative left-60 rounded-md">
+        className="hidden lg:inline md:col-span-3 max-h-60 w-[600px] mx-auto text-center mb-10 pt-4 lg:mb-14 md:bg-primary px-4 relative left-60 rounded-md">
         <p className="mt-1 text-yellow-500 dark:text-gray-400">
           All services
         </p>

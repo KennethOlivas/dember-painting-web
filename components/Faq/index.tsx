@@ -15,11 +15,11 @@ const FAQ = () => {
         <div className="md:col-span-3 hidden md:inline relative">
           <NetxuiImage
             as={Image}
-            width={700}
-            height={800}
+            width={500}
+            height={700}
             isBlurred
             className="w-full h-full rounded-md mt-14"
-            src="https://images.unsplash.com/photo-1585676737728-432f58d5fdba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80"
+            src="/images/faqImage.webp"
             alt="Image Description"
           />
           <div className="absolute inset-0 -z-[1] bg-secondary w-full h-full rounded-md mt-4 -mb-4 mr-4 -ml-4 lg:mt-6 lg:-mb-6 lg:mr-6 lg:-ml-6 "></div>
