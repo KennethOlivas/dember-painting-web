@@ -55,7 +55,7 @@ const ContactForm = () => {
               value={formik.values.phone}
               id="phone"
               type="text"
-              label="phone number"
+              label="Phone number"
               variant="underlined"
               color="primary"
             />
