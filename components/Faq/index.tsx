@@ -1,6 +1,5 @@
 "use client";
 import { FAQList } from "@/constants/FAQList";
-import useInViewControl from "@/hooks/useInViewControl";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { Image as NetxuiImage } from "@nextui-org/react";
 import Image from "next/image";
@@ -10,8 +9,8 @@ const FAQ = () => {
   return (
     <div
       id="faq"
-      className="mx-auto max-w-screen-2xl">
-      <section className="grid grid-cols-1 md:grid-cols-9 h-screen place-items-center gap-x-8">
+      className="mx-auto max-w-screen-2xl my-4 md:my-0">
+      <section className="grid grid-cols-1 md:grid-cols-9 md:h-screen place-items-center gap-x-8">
         <div className="md:col-span-3 hidden md:inline relative">
           <NetxuiImage
             as={Image}
@@ -27,7 +26,7 @@ const FAQ = () => {
         <div className="md:col-span-6 justify-self-start">
           <Reveal>
             <span className="text-xl text-secondary font-semibold ml-2">FAQ</span>
-            <h1 className="text-6xl font-bold text-black ml-2 lg:pr-48 pr-0 ">
+            <h1 className="text-4xl md:text-6xl font-bold text-black ml-2 lg:pr-48 pr-0 tracking-wider">
               Find frequently asked questions here
             </h1>
 

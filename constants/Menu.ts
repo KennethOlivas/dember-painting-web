@@ -12,11 +12,11 @@ export const Menu: MenuItem[] = [
     },
     {
         name: 'Services',
-        path: '/services',
+        path: '/#services',
     },
     {
         name: 'About',
-        path: '/about',
+        path: '/#about',
     },
     {
         name: 'Gallery',
@@ -24,6 +24,6 @@ export const Menu: MenuItem[] = [
     },
     {
         name: 'Contact',
-        path: '/contact',
+        path: '/#contact',
     },
 ];

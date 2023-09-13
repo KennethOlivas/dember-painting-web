@@ -1,4 +1,5 @@
 "use client";
+import { Menu } from "@/constants/Menu";
 import {
   Navbar,
   NavbarBrand,
@@ -11,30 +12,8 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/react";
 import Image from "next/image";
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 
-const menuItems = [
-  {
-    name: "Home",
-    href: "/",
-  },
-  {
-    name: "About",
-    href: "/#about",
-  },
-  {
-    name: "Services",
-    href: "/#services",
-  },
-  {
-    name: "FAQ's",
-    href: "/#faq",
-  },
-  {
-    name: "Gallery",
-    href: "/gallery",
-  },
-];
 
 const NavBarHeader: FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,9 +37,9 @@ const NavBarHeader: FC = () => {
         </li>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-8" justify="center">
-        {menuItems.map((item, index) => (
+        {Menu.map((item, index) => (
           <NavbarItem key={`${item.name}-${index}`}>
-            <Link color="foreground" href={item.href}>
+            <Link color="foreground" href={item.path}>
               {item.name}
             </Link>
           </NavbarItem>
@@ -79,13 +58,13 @@ const NavBarHeader: FC = () => {
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu className="bg-opacity-50 bg-black justify-center items-center space-y-8">
-        {menuItems.map((item, index) => (
+        {Menu.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               onClick={() => setIsMenuOpen(false)}
               color="foreground"
               className="w-full text-white text-4xl text-center"
-              href={item.href}
+              href={item.path}
               size="lg">
               {item.name}
             </Link>

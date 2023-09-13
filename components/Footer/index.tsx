@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="bg-primary">
       <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <section className="grid row-gap-10 mb-8 lg:grid-cols-3">
-          <div className="grid grid-cols-3 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-3">
+          <div className="grid grid-cols-3 gap-4 md:gap-5 row-gap-8 lg:col-span-4 md:grid-cols-3">
             <FooterListItems items={Menu} title="Pages" />
             <div>
               <p className="font-medium tracking-wide text-white">Contact Us</p>
@@ -19,10 +19,10 @@ const Footer = () => {
                   {phone}
                 </li>
                 <li className="text-white transition-colors duration-300 hover:text-deep-purple-accent-200">
-                  {email}
+                  {directions}
                 </li>
                 <li className="text-white transition-colors duration-300 hover:text-deep-purple-accent-200">
-                  {directions}
+                  {email}
                 </li>
               </ul>
             </div>
