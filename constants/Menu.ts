@@ -22,8 +22,4 @@ export const Menu: MenuItem[] = [
         name: 'Gallery',
         path: '/gallery',
     },
-    {
-        name: 'Contact',
-        path: '/#contact',
-    },
 ];

@@ -13,6 +13,7 @@ import {
 } from "@nextui-org/react";
 import Image from "next/image";
 import { FC, useState } from "react";
+import NextLink from "next/link";
 
 
 const NavBarHeader: FC = () => {
@@ -23,7 +24,6 @@ const NavBarHeader: FC = () => {
       isMenuOpen={isMenuOpen}
       shouldHideOnScroll
       onMenuOpenChange={(open) => setIsMenuOpen(open as boolean)}
-      className="max-w-full"
       maxWidth="2xl"
     >
       <NavbarContent>
@@ -31,15 +31,19 @@ const NavBarHeader: FC = () => {
           <NavbarMenuToggle className="sm:hidden md:text-white" />
         </li>
         <li>
-          <NavbarBrand>
-            <Image src="/logo.png" alt="logo" width={200} height={200} className="mt-2" />
-          </NavbarBrand>
+          <NextLink href="/" className="hover:cursor-pointer">
+            <NavbarBrand >
+              <Image src="/logo.png" alt="logo" width={200} height={200} className="mt-2" priority/>
+            </NavbarBrand>
+          </NextLink>
         </li>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-8" justify="center">
         {Menu.map((item, index) => (
           <NavbarItem key={`${item.name}-${index}`}>
-            <Link color="foreground" href={item.path}>
+            <Link
+              as={NextLink}
+              color="foreground" href={item.path}>
               {item.name}
             </Link>
           </NavbarItem>
@@ -48,7 +52,7 @@ const NavBarHeader: FC = () => {
       <NavbarContent justify="end">
         <NavbarItem>
           <Button
-            as={Link}
+            as={NextLink}
             color="primary"
             href="/#contact"
             variant="shadow"
@@ -61,6 +65,7 @@ const NavBarHeader: FC = () => {
         {Menu.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
+              as={NextLink}
               onClick={() => setIsMenuOpen(false)}
               color="foreground"
               className="w-full text-white text-4xl text-center"

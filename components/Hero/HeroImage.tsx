@@ -32,7 +32,6 @@ const HeroImage: FC<HeroImageProps> = ({ alt, delay, src }) => {
         priority={true}
         height={100}
         width={300}
-        layout="responsive"
         src={src}
         alt={alt}
         className="w-full rounded-md shadow-2xl hover:scale-105 duration-200 ease-in"
