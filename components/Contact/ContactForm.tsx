@@ -1,7 +1,7 @@
 import { Button, Card, Input, Textarea } from "@nextui-org/react";
 import { useFormik } from "formik";
 import React from "react";
-
+import toast, { Toaster } from 'react-hot-toast'
 
 const ContactForm = () => {
   const formik = useFormik({
@@ -12,14 +12,19 @@ const ContactForm = () => {
       message: ''
     },
     onSubmit: async values => {
-      await fetch('/api/send', {
+      toast.promise(fetch('/api/send', {
         method: 'POST',
         body: JSON.stringify(values),
-      });
+      }), {
+        loading: 'Sending...',
+        success: 'Message sent successfully',
+        error: 'An error occurred, please try again'
+      })
     },
   });
   return (
     <Card className="w-full px-4 lg:w-5/12 xl:w-4/12">
+      <Toaster />
       <div
         className="shadow-testimonial wow fadeInUp rounded-lg bg-white px-8 py-10 sm:px-10 sm:py-12 md:p-[60px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[60px]"
         data-wow-delay=".2s">
@@ -45,7 +50,7 @@ const ContactForm = () => {
               onChange={formik.handleChange}
               value={formik.values.email}
               id="email"
-              type="enail"
+              type="email"
               label="Email"
               variant="underlined"
               color="primary"
