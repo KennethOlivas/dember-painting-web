@@ -29,6 +29,7 @@ const ContactForm = () => {
         <form onSubmit={formik.handleSubmit}>
           <div className="mb-6">
             <Input
+              isRequired
               onChange={formik.handleChange}
               value={formik.values.fullName}
               id="fullName"
@@ -40,6 +41,7 @@ const ContactForm = () => {
           </div>
           <div className="mb-6">
             <Input
+              isRequired
               onChange={formik.handleChange}
               value={formik.values.email}
               id="email"
@@ -51,6 +53,7 @@ const ContactForm = () => {
           </div>
           <div className="mb-6">
             <Input
+              isRequired
               onChange={formik.handleChange}
               value={formik.values.phone}
               id="phone"
@@ -74,6 +77,7 @@ const ContactForm = () => {
           </div>
           <div className="mb-0">
             <Button
+              isLoading={formik.isSubmitting}
               type="submit" variant="shadow" color="primary" size="lg">
               Send Message
             </Button>
