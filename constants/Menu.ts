@@ -11,15 +11,19 @@ export const Menu: MenuItem[] = [
         path: '/',
     },
     {
-        name: 'Services',
-        path: '/#services',
-    },
-    {
         name: 'About',
         path: '/#about',
     },
     {
+        name: 'Services',
+        path: '/#services',
+    },
+    {
         name: 'Gallery',
         path: '/gallery',
+    },
+    {
+        name: "FAQ's",
+        path: '/#faq',
     },
 ];
