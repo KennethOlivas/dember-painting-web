@@ -2,6 +2,22 @@ import { Button, Card, Input, Textarea } from "@nextui-org/react";
 import { useFormik } from "formik";
 import React from "react";
 import toast, { Toaster } from 'react-hot-toast'
+import { z } from "zod";
+import { toFormikValidate } from "zod-formik-adapter";
+
+
+const ContactSchema = z.object({
+  fullName: z.string({
+    required_error: 'Full name is required'
+  }).nonempty({ message: 'Full name is required' }),
+  email: z.string({
+    required_error: 'Email address is required'
+  }).email({ message: 'Invalid email address' }),
+  phone: z.string({
+    required_error: 'Phone number is required'
+  }).nonempty({ message: 'Phone number is required' }),
+  message: z.string().optional(),
+})
 
 const ContactForm = () => {
   const formik = useFormik({
@@ -11,8 +27,11 @@ const ContactForm = () => {
       email: '',
       message: ''
     },
-    onSubmit: async values => {
-      toast.promise(fetch('/api/send', {
+    validateOnChange: false,
+    validate: toFormikValidate(ContactSchema),
+    onSubmit: async (values, helper) => {
+      helper.setSubmitting(true);
+      await toast.promise(fetch('/api/send', {
         method: 'POST',
         body: JSON.stringify(values),
       }), {
@@ -20,8 +39,10 @@ const ContactForm = () => {
         success: 'Message sent successfully',
         error: 'An error occurred, please try again'
       })
+      helper.setSubmitting(false);
     },
   });
+
   return (
     <Card className="w-full px-4 lg:w-5/12 xl:w-4/12">
       <Toaster />
@@ -34,11 +55,11 @@ const ContactForm = () => {
         <form onSubmit={formik.handleSubmit}>
           <div className="mb-6">
             <Input
-              isRequired
               onChange={formik.handleChange}
               value={formik.values.fullName}
+              errorMessage={formik.errors.fullName}
+              isInvalid={!!formik.errors.fullName}
               id="fullName"
-              type="text"
               label="Full name"
               variant="underlined"
               color="primary"
@@ -46,11 +67,10 @@ const ContactForm = () => {
           </div>
           <div className="mb-6">
             <Input
-              isRequired
               onChange={formik.handleChange}
               value={formik.values.email}
+              errorMessage={formik.errors.email}
               id="email"
-              type="email"
               label="Email"
               variant="underlined"
               color="primary"
@@ -58,11 +78,10 @@ const ContactForm = () => {
           </div>
           <div className="mb-6">
             <Input
-              isRequired
               onChange={formik.handleChange}
               value={formik.values.phone}
+              errorMessage={formik.errors.phone}
               id="phone"
-              type="text"
               label="Phone number"
               variant="underlined"
               color="primary"
@@ -72,6 +91,7 @@ const ContactForm = () => {
             <Textarea
               onChange={formik.handleChange}
               value={formik.values.message}
+              errorMessage={formik.errors.message}
               color="primary"
               id="message"
               variant="underlined"
