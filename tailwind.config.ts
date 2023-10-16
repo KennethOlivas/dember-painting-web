@@ -49,7 +49,7 @@ const config: Config = {
           },
           accent: {
             foreground: "#FFFFFF",
-            DEFAULT: "##12c46b",
+            DEFAULT: "#12c46b",
           },
           // ... rest of the colors
         },
