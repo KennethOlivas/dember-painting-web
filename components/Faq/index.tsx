@@ -29,7 +29,6 @@ const FAQ = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-black ml-2 lg:pr-48 pr-0 tracking-wider">
               Find frequently asked questions here
             </h1>
-
             <Accordion
               showDivider
               variant="splitted" className="mt-8 mr-0">
@@ -37,7 +36,6 @@ const FAQ = () => {
                 key={index}
                 aria-label="Question1"
                 title={question}
-                contentEditable
                 className="font-semibold text-2xl">
                 <span className="text-base font-normal leading-none">
                   {answer}
