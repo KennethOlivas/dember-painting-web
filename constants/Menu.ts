@@ -23,7 +23,12 @@ export const Menu: MenuItem[] = [
         path: '/gallery',
     },
     {
+        name: "Reviews",
+        path: '/#reviews',
+    },
+    {
         name: "FAQ's",
         path: '/#faq',
     },
+
 ];
