@@ -1,11 +1,12 @@
 "use client"
-import { images } from '@/constants/Images';
+import { CustomImage, images } from '@/constants/Images';
 import { Divider } from '@nextui-org/react';
 import { NextPage } from 'next';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Gallery } from 'react-grid-gallery';
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import { useMotionValueEvent, useScroll } from "framer-motion"
 
 const slides = images.map(({ original, width, height }) => ({
   src: original,
@@ -15,6 +16,22 @@ const slides = images.map(({ original, width, height }) => ({
 
 const Page: NextPage = () => {
   const [index, setIndex] = useState(-1);
+  const [imagesGallery, setImageGallery] = useState<CustomImage[]>([]);
+  const [pointer, setPointer] = useState(0);
+
+  const { scrollYProgress } = useScroll()
+
+  useEffect(() => {
+    setImageGallery(prevImages => [...prevImages, ...images.slice(pointer, pointer + 10)])
+  }, [pointer])
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    if (pointer >= images.length) return
+    if (latest >= 0.8) {
+      setPointer(pointer + 10)
+    }
+  })
+
 
   const handleClick = (index: number) => setIndex(index);
   return (
@@ -31,7 +48,7 @@ const Page: NextPage = () => {
           textAlign: 'center',
           color: 'white',
         }}
-        images={images}
+        images={imagesGallery}
         onClick={handleClick}
         enableImageSelection={false}
       />
