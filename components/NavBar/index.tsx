@@ -27,13 +27,11 @@ const NavBarHeader: FC = () => {
       maxWidth="2xl"
     >
       <NavbarContent>
-        <li>
-          <NavbarMenuToggle className="sm:hidden md:text-white" />
-        </li>
+        <NavbarMenuToggle className="sm:hidden md:text-white" />
         <li>
           <NextLink href="/" className="hover:cursor-pointer">
             <NavbarBrand >
-              <Image src="/logo.png" alt="logo" width={200} height={200} className="mt-2" priority/>
+              <Image src="/logo.png" alt="logo" width={200} height={200} className="mt-2" priority />
             </NavbarBrand>
           </NextLink>
         </li>
