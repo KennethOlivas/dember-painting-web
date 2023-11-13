@@ -2,7 +2,6 @@
 import { Menu } from "@/constants/Menu";
 import {
   Navbar,
-  NavbarBrand,
   NavbarContent,
   NavbarItem,
   Link,
@@ -11,30 +10,23 @@ import {
   NavbarMenuToggle,
   NavbarMenuItem,
 } from "@nextui-org/react";
-import Image from "next/image";
 import { FC, useState } from "react";
 import NextLink from "next/link";
+import Logo from "./Logo";
 
 
 const NavBarHeader: FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <Navbar
       isMenuOpen={isMenuOpen}
-      shouldHideOnScroll
       onMenuOpenChange={(open) => setIsMenuOpen(open as boolean)}
       maxWidth="2xl"
+      position="static"
     >
       <NavbarContent>
         <NavbarMenuToggle className="sm:hidden md:text-white" />
-        <li>
-          <NextLink href="/" className="hover:cursor-pointer">
-            <NavbarBrand >
-              <Image src="/logo.png" alt="logo" width={200} height={200} className="mt-2" priority />
-            </NavbarBrand>
-          </NextLink>
-        </li>
+        <Logo />
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-8" justify="center">
         {Menu.map((item, index) => (
