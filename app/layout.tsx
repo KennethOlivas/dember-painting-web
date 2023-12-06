@@ -27,9 +27,9 @@ const RootLayout: FC<LayoutProps> = ({ children }) => {
     <html lang="en">
       <body className={`${cabin.variable} font-sans`}>
         <Providers>
-          {/* <NavBar /> */}
+          <NavBar />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </Providers>
       </body>
     </html>
