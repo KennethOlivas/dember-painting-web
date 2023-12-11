@@ -22,22 +22,6 @@ export const images: CustomImage[] = [
     tags: [{ value: "After", title: "After" }],
   },
   {
-    src: "/images/gallery/34 DESPUES 2.webp",
-    original: "/images/gallery/34 DESPUES 2.webp",
-    width: 1451,
-    height: 1350,
-    alt: "34 After",
-    tags: [{ value: "After", title: "After" }],
-  },
-  {
-    src: "/images/gallery/33 DESPUES 1.webp",
-    original: "/images/gallery/33 DESPUES 1.webp",
-    width: 1536,
-    height: 2048,
-    alt: "33 After",
-    tags: [{ value: "After", title: "After" }],
-  },
-  {
     src: "/images/gallery/32 DESPUES.webp",
     original: "/images/gallery/32 DESPUES.webp",
     width: 1536,
@@ -91,22 +75,6 @@ export const images: CustomImage[] = [
     width: 1536,
     height: 2048,
     alt: "28 Before",
-    tags: [{ value: "After", title: "After" }],
-  },
-  {
-    src: "/images/gallery/27B DESPUES.webp",
-    original: "/images/gallery/27B DESPUES.webp",
-    width: 1536,
-    height: 2048,
-    alt: "27 Before",
-    tags: [{ value: "After", title: "After" }],
-  },
-  {
-    src: "/images/gallery/27A DESPUES.webp",
-    original: "/images/gallery/27A DESPUES.webp",
-    width: 1536,
-    height: 2048,
-    alt: "27 Before",
     tags: [{ value: "After", title: "After" }],
   },
   {
@@ -204,14 +172,6 @@ export const images: CustomImage[] = [
     height: 2048,
   },
   {
-    src: "/images/gallery/3L.webp",
-    original: "/images/gallery/3L.webp",
-    tags: [{ value: "After", title: "After" }],
-    alt: "3L",
-    width: 1536,
-    height: 2048,
-  },
-  {
     src: "/images/gallery/4L.webp",
     original: "/images/gallery/4L.webp",
     tags: [{ value: "After", title: "After" }],
@@ -304,30 +264,6 @@ export const images: CustomImage[] = [
     original: "/images/gallery/15L.webp",
     tags: [{ value: "After", title: "After" }],
     alt: "15L",
-    width: 1536,
-    height: 2048
-  },
-  {
-    src: "/images/gallery/16L.webp",
-    original: "/images/gallery/16L.webp",
-    tags: [{ value: "After", title: "After" }],
-    alt: "16L",
-    width: 1536,
-    height: 2048
-  },
-  {
-    src: "/images/gallery/17.webp",
-    original: "/images/gallery/17.webp",
-    tags: [{ value: "Before", title: "Before" }],
-    alt: "17L",
-    width: 1536,
-    height: 2048
-  },
-  {
-    src: "/images/gallery/18.webp",
-    original: "/images/gallery/18.webp",
-    tags: [{ value: "After", title: "After" }],
-    alt: "18L",
     width: 1536,
     height: 2048
   },
