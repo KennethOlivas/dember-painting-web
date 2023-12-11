@@ -18,11 +18,11 @@ const Page: NextPage = () => {
   const [index, setIndex] = useState(-1);
   const [imagesGallery, setImageGallery] = useState<CustomImage[]>([]);
   const [pointer, setPointer] = useState(0);
-
+  console.log(imagesGallery)
   const { scrollYProgress } = useScroll()
 
   useEffect(() => {
-    setImageGallery(prevImages => [...prevImages, ...images.slice(pointer, pointer + 10)])
+    setImageGallery(images.slice(0, pointer))
   }, [pointer])
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
