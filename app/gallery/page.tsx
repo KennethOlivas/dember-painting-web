@@ -28,7 +28,7 @@ const Page: NextPage = () => {
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     if (pointer >= images.length) return
     if (latest >= 0.8) {
-      setPointer(pointer + 10)
+      setPointer(pointer + 20)
     }
   })
 

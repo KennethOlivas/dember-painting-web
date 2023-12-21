@@ -7,7 +7,7 @@ import { FC } from "react";
 import { Cabin } from 'next/font/google'
 
 export const metadata: Metadata = {
-  title: "Dember Painting I.N.C - Painting Service",
+  title: "Dember Painting inc - Painting Service",
   description:
     "We are experts in high-quality painting services. Transforming your spaces into works of art.",
 };
