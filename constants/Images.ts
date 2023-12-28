@@ -78,6 +78,13 @@ export const images: CustomImage[] = [
     tags: [{ value: "After", title: "After" }],
   },
   {
+    src: "/images/gallery/39.webp",
+    original: "/images/gallery/pack1/39.webp",
+    width: 1536,
+    height: 2048,
+    alt: "39",
+  },
+  {
     src: "/images/gallery/pack1/42 Antes_6_11zon.webp",
     original: "/images/gallery/pack1/42 Antes_6_11zon.webp",
     width: 1536,
@@ -92,6 +99,13 @@ export const images: CustomImage[] = [
     height: 2048,
     alt: "43 After",
     tags: [{ value: "After", title: "After" }],
+  },
+  {
+    src: "/images/gallery/CAMIONETA.webp",
+    original: "/images/gallery/CAMIONETA.webp",
+    width: 1536,
+    height: 2048,
+    alt: "CAMIONETA",
   },
   {
     src: "/images/gallery/pack1/40 Antes_4_11zon.webp",
@@ -141,7 +155,22 @@ export const images: CustomImage[] = [
     alt: "36 After",
     tags: [{ value: "After", title: "After" }],
   },
-
+  {
+    src: "/images/gallery/38_BEFORE.webp",
+    original: "/images/gallery/38_BEFORE.webp",
+    width: 1536,
+    height: 2048,
+    alt: "38 BEFORE",
+    tags: [{ value: "Before", title: "Before" }],
+  },
+  {
+    src: "/images/gallery/36_AFTER.webp",
+    original: "/images/gallery/36_AFTER.webp",
+    width: 1536,
+    height: 2048,
+    alt: "36 AFTER.webp",
+    tags: [{ value: "After", title: "After" }],
+  },
   {
     src: "/images/gallery/30 ANTES.webp",
     original: "/images/gallery/30 ANTES.webp",
@@ -157,6 +186,13 @@ export const images: CustomImage[] = [
     height: 2048,
     alt: "31 After",
     tags: [{ value: "After", title: "After" }],
+  },
+  {
+    src: "/images/gallery/37_Selfish.webp",
+    original: "/images/gallery/37_Selfish.webp",
+    width: 1536,
+    height: 2048,
+    alt: "37_Selfish.webp",
   },
   {
     src: "/images/gallery/29 ANTES.webp",
